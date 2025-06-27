@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+  
+  <style>
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .product {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+
+    .product p {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .order-btn {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .order-btn:hover {
+      background-color: #ff007b;
+      color: black;
+    }
+
+    .blink-once {
+      animation: blinkOnce 0.3s ease-in-out;
+    }
+
+    @keyframes blinkOnce {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    @media (max-width: 992px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="head">
+    <nav class="button">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="products.html">PRODUCTS</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <div class="main">
+      <h1>Our Products</h1>
+    </div>
+
+    <div class="product-grid">
+      
+      <div class="card" style="width: 18rem;">
+  <img src="img1.jpeg" class="card-img-top" alt="img 1">
+  <div class="card-body">
+    <h3 class="card-title">case 1</h3>
+    <p class="card-text">₹349</p>
+    <a href="#" class="btn btn-primary onclick="showProduct('Phone Case #1') onclick="showProduct(name)" ">Buy now</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="img2.jpeg" class="card-img-top" alt="img 2">
+  <div class="card-body">
+    <h3 class="card-title">case 2</h3>
+    <p class="card-text">₹349</p>
+    <a href="#" class="btn btn-primary onclick="showProduct('Phone Case #2') onclick="showProduct(name)" ">Buy now</a>
+  </div>
+</div><div class="card" style="width: 18rem;">
+  <img src="img3.jpeg" class="card-img-top" alt="img 3">
+  <div class="card-body">
+    <h3 class="card-title">case 3</h3>
+    <p class="card-text">₹349</p>
+    <a href="#" class="btn btn-primary onclick="showProduct('Phone Case #3') onclick="showProduct(name)" ">Buy now</a>
+  </div>
+</div><div class="card" style="width: 18rem;">
+  <img src="img4.jpeg" class="card-img-top" alt="img 1">
+  <div class="card-body">
+    <h3 class="card-title">case 4</h3>
+    <p class="card-text">₹349</p>
+    <a href="#" class="btn btn-primary onclick="showProduct('Phone Case #4') onclick="showProduct(name)" ">Buy now</a>
+  </div>
+</div><div class="card" style="width: 18rem;">
+  <img src="img5.jpeg" class="card-img-top" alt="img 1">
+  <div class="card-body">
+    <h3 class="card-title">case 5</h3>
+    <p class="card-text">₹349</p>
+    <a href="#" class="btn btn-primary onclick="showProduct('Phone Case #5') onclick="showProduct(name)" ">Buy now</a>
+  </div>
+</div><div class="card" style="width: 18rem;">
+  <img src="img6.jpeg" class="card-img-top" alt="img 1">
+  <div class="card-body">
+    <h3 class="card-title">case 6</h3>
+    <p class="card-text">₹349</p>
+    <a href="#" class="btn btn-primary onclick="showProduct('Phone Case #6') onclick="showProduct(name)" ">Buy now</a>
+  </div>
+</div><div class="card" style="width: 18rem;">
+  <img src="img7.jpeg" class="card-img-top" alt="img 1">
+  <div class="card-body">
+    <h3 class="card-title">case 7</h3>
+    <p class="card-text">₹349</p>
+    <a href="#" class="btn btn-primary onclick="showProduct('Phone Case #7') onclick="showProduct(name)" ">Buy now</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="img8.jpeg" class="card-img-top" alt="img 1">
+  <div class="card-body">
+    <h3 class="card-title">case 8</h3>
+    <p class="card-text">₹349</p>
+    <a href="#" class="btn btn-primary onclick="showProduct('Phone Case #8') onclick="showProduct(name)" ">Buy now</a>
+  </div>
+</div>
+
+     
+
+      <div class="product" onmouseover="blinkOnce(this)">
+        <img src="img9.jpeg" alt="Phone Case 9" />
+        <h3>Phone Case #9</h3>
+        <p>₹269</p>
+        <button class="order-btn" onclick="showProduct('Phone Case #9')">Buy Now</button>
+      </div>
+
+      <div class="product" onmouseover="blinkOnce(this)">
+        <img src="img10.jpeg" alt="Phone Case 10" />
+        <h3>Phone Case #10</h3>
+        <p>₹379</p>
+        <button class="order-btn" onclick="showProduct('Phone Case #10')">Buy Now</button>
+      </div>
+
+      <div class="product" onmouseover="blinkOnce(this)">
+        <img src="img11.jpeg" alt="Phone Case 11" />
+        <h3>Phone Case #11</h3>
+        <p>₹299</p>
+        <button class="order-btn" onclick="showProduct('Phone Case #11')">Buy Now</button>
+      </div>
+
+      <div class="product" onmouseover="blinkOnce(this)">
+        <img src="img12.jpeg" alt="Phone Case 12" />
+        <h3>Phone Case #12</h3>
+        <p>₹349</p>
+        <button class="order-btn" onclick="showProduct('Phone Case #12')">Buy Now</button>
+      </div>
+
+      <div class="product" onmouseover="blinkOnce(this)">
+        <img src="img13.jpeg" alt="Phone Case 13" />
+        <h3>Phone Case #13</h3>
+        <p>₹319</p>
+        <button class="order-btn" onclick="showProduct('Phone Case #13')">Buy Now</button>
+      </div>
+
+      <div class="product" onmouseover="blinkOnce(this)">
+        <img src="img14.jpeg" alt="Phone Case 14" />
+        <h3>Phone Case #14</h3>
+        <p>₹289</p>
+        <button class="order-btn" onclick="showProduct('Phone Case #14')">Buy Now</button>
+      </div>
+
+      <div class="product" onmouseover="blinkOnce(this)">
+        <img src="img15.jpeg" alt="Phone Case 15" />
+        <h3>Phone Case #15</h3>
+        <p>₹369</p>
+        <button class="order-btn" onclick="showProduct('Phone Case #15')">Buy Now</button>
+      </div>
+
+      <div class="product" onmouseover="blinkOnce(this)">
+        <img src="img16.jpeg" alt="Phone Case 16" />
+        <h3>Phone Case #16</h3>
+        <p>₹399</p>
+        <button class="order-btn" onclick="showProduct('Phone Case #16')">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function blinkOnce(element) {
+      element.classList.add("blink-once");
+      setTimeout(function () {
+        element.classList.remove("blink-once");
+      }, 300);
+    }
+
+    function showProduct(name) {
+      alert("This is the product you selected: " + name);
+    }
+  </script>
+</body>
+</html>
